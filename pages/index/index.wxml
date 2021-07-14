@@ -1,0 +1,32 @@
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{api}}{{item.logo}}" mode="aspectFill" class="slide-image" style="width:100%" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="contain">
+  <view class="left">
+    <view bindtap="clickCategory" data-item="{{item}}" class="{{item.id==cid?'category active':'category'}}" wx:for="{{category}}" wx:key="*this">{{item.category}}</view>
+    <!--for循环从index.js里取出数组并展示-->
+    <!-- class属性中的三目运算符，使样式叠加 -->
+  </view>
+  <view class="right">
+    <view class="product" bindtap="startPage" data-item="{{item}}" wx:for="{{product}}" wx:key="*this">
+      <image class="logo" src="{{api}}{{item.logo}}" mode="aspectFill"></image>
+      <view class="info">
+        <view class="title">{{item.product}}</view>
+        <!-- 16行的product是本页的全局变量，上一行的product是ProductBean里的属性名 -->
+        <view class="price">{{item.price}}元/个</view>
+        <view class="num">剩余{{item.num}}个</view>
+      </view>
+      <view class="group">
+        <image class="add" catchtap="addCart" data-item="{{item}}" src="../../images/add.png"></image>
+        <view class="count">{{item.count}}</view>
+        <image class="reduce" catchtap="reduceCart" data-item="{{item}}" src="../../images/reduce.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

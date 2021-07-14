@@ -1,0 +1,27 @@
+/*左侧定宽，右侧填充剩余宽度。*/
+/*px是像素的意思，rpx是适配手机像素，小程序所有的单位都要用rpx*/
+.contain{
+  overflow: hidden; /*清除浮动。如果不清除浮动，会随内部容器发生塌陷*/
+}
+.left{
+  float: left; /*左浮动*/
+  width: 170rpx; /*没有高度。高度随left内部内容的变化而变化。*/
+  border-right: 1rpx solid green;
+}
+
+.right{
+  overflow: hidden; /*填充剩余宽度*/
+}
+.category{
+  width: 100%; /*随上级<view>，为160rpx*/
+  height: 75rpx;
+  line-height: 76rpx; /*height+线宽=line-height，垂直居中*/
+  text-align: center; /*水平居中*/
+  border-bottom: 1rpx solid green; /*实线，绿色*/
+}
+.active{
+  height: 70rpx;
+  color: red;
+  border-bottom: 6rpx solid red; /*height+线宽=line-height，垂直居中*/
+  font-weight: bold;
+}

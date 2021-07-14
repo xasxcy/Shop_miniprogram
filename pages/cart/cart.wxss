@@ -1,0 +1,43 @@
+/* pages/cart.wxss */
+.fee{
+  position: absolute;
+  overflow: right;
+  top: 28rpx;
+  right: 15rpx;
+  font-size: 28rpx;
+}
+.wrapper{
+  overflow: hidden;
+  padding: 15rpx;
+}
+.total{
+  overflow: hidden;
+  line-height: 80rpx;
+  height: 80rpx; /*高度=行高，单行文字垂直居中*/
+  font-weight: bold;
+  color: red;
+  font-size: 42rpx;
+}
+.submit{
+  float: right;
+}
+
+.contain{
+  padding: 15rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.box{
+  overflow: hidden;
+}
+.label{
+  float: left;
+  border-right: 1rpx solid #eee;
+}
+.input{
+  overflow: hidden;
+}
+.person{
+  text-align: center; /*水平居中*/
+  font-weight: bold;
+}

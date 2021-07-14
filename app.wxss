@@ -1,0 +1,60 @@
+/**全局css样式**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.product{
+  position: relative; /*把商品设置成参照物，让里面的元素相对于参照物进行定位*/
+  overflow: hidden; /*容器清除浮动*/
+  padding: 15rpx; /*上线左右内边距15rpx*/
+  border-bottom: 1rpx solid #eee;
+}
+
+.logo{
+  margin-right: 15rpx; /*右外边距15rpx*/
+  width: 160rpx;
+  height: 160rpx;
+  float: left; /*左图定宽*/
+}
+.info{
+  overflow: hidden; /*右侧文字填充剩余宽度*/
+}
+.title{
+  font-weight: bold; /*加粗*/
+}
+
+.price{
+  margin-top: 12rpx; /*上外边距*/
+  font-size: 36rpx;
+}
+
+.num{
+  font-size: 36rpx;
+}
+
+/*把垂直排列变成水平排列，要使用float：为子view加上同一边的float*/
+.group{
+  position: absolute; /*定位，它会去找参照物*/
+  top: 120rpx;
+  right: 15rpx; /*这两行表示右上角*/
+}
+.count{
+  margin: 0 10rpx;
+  /* padding: 0 10rpx; 上下为0，左右为10 */
+  float: right;
+}
+.add{
+  width: 50rpx;
+  height: 50rpx;
+  float: right;
+}
+.reduce{
+  width: 50rpx;
+  height: 50rpx;
+  float: right;
+}

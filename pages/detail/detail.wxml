@@ -1,0 +1,4 @@
+<!--pages/detail/detail.wxml-->
+<image mode="aspectFill" src="{{api}}{{item.logo}}" ></image>
+<text>{{item.product}}</text>
+<view>{{item.price}}元/个</view>
